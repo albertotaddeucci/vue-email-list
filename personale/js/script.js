@@ -13,18 +13,19 @@ const { createApp } = Vue
 
         this.filtered = []
         // console.log(this.monsters[1].name)
+        this.search = this.search.trim()
 
         this.monsters.forEach(monster=>{
 
           const string = monster.name.toLowerCase()
+          const toFilter = this.search.toLowerCase()
 
-          if (string.includes(`${this.search}`)){
+          if (this.search != "" && string.includes(`${toFilter}`) ){
             this.filtered.push(monster.name)
-          }
+            
 
-          
-          
-          
+          } 
+
           
         })
         
