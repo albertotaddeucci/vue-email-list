@@ -15,7 +15,6 @@ const { createApp } = Vue
             .then(response => {           
     
             this.emails.push(response.data.response)
-            console.log(this.emails.length)
     
         });
             
